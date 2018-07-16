@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'uploads',
     'decomposition',
     'ms1analysis',
+    'debug_toolbar',
 ]
 
 MIDDLEWARE_CLASSES = [
@@ -58,6 +59,7 @@ MIDDLEWARE_CLASSES = [
     'django.contrib.auth.middleware.SessionAuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'debug_toolbar.middleware.DebugToolbarMiddleware',
 ]
 
 TEMPLATES = [
@@ -150,3 +152,4 @@ DATA_UPLOAD_MAX_MEMORY_SIZE = 10000000
 
 CELERY_BROKER_URL = "redis://localhost:6379/0"
 
+INTERNAL_IPS=('127.0.0.1', 'localhost',)
