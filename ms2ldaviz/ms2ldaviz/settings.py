@@ -148,5 +148,5 @@ STATICFILES_DIRS = (
 # Approx 10MB for big API requests
 DATA_UPLOAD_MAX_MEMORY_SIZE = 10000000
 
-CELERY_BROKER_URL = "redis://localhost:6379/0"
+CELERY_BROKER_URL = "redis://localhost:6370/0"
 
