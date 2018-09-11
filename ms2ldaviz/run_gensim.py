@@ -153,10 +153,10 @@ def gensim(corpusjson, ldajson,
         index2doc.append(doc)
 
     lda = LdaMulticore(corpus,
-                       num_topics=k, iterations=100,
+                       num_topics=k, iterations=1000,
                        per_word_topics=True, gamma_threshold=gamma_threshold,
-                       chunksize=len(corpus), batch=batch,
-                       passes=100, alpha='symmetric', eta=0.1,
+                       chunksize=10000, batch=batch,
+                       passes=100, alpha='symmetric', eta=0.1,workers=4
                        )
 #     lda = LdaModel(corpus, num_topics=k, iterations=100,
 #                     chunksize=len(corpus), update_every=1, eta=0.1, alpha='auto',
